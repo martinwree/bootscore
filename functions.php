@@ -259,9 +259,9 @@ function bootscore_scripts() {
   wp_enqueue_style('bootscore-style', get_stylesheet_uri(), array(), $modificated_styleCss);
 
   // bootScore
-  require_once 'inc/scss-compiler.php';
-  bootscore_compile_scss();
-  wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated_bootscoreCss);
+  //require_once 'inc/scss-compiler.php';
+  //bootscore_compile_scss();
+  //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/lib/bootstrap.min.css', array(), $modificated_bootscoreCss);
 
   // Fontawesome
   wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/lib/fontawesome.min.css', array(), $modificated_fontawesomeCss);
