@@ -31,7 +31,7 @@ if (!function_exists('bootscore_comment')) :
 
       <li id="comment-<?php comment_ID(); ?>" <?php comment_class(empty($args['has_children']) ? '' : 'parent'); ?>>
 
-        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body mt-4 d-flex">
+        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body mt-2 d-flex">
 
           <div class="flex-shrink-0 me-3">
             <?php if (0 != $args['avatar_size']) echo get_avatar($comment, $args['avatar_size'], '', '', array('class' => 'img-thumbnail rounded-circle')); ?>
@@ -44,7 +44,7 @@ if (!function_exists('bootscore_comment')) :
                 <div class="mt-0"><?php printf(__('%s <span class="says d-none">says:</span>', 'bootscore'), sprintf('<h3 class="">%s</h3>', get_comment_author_link())); ?>
                 </div>
 
-                <div class="small comment-meta text-muted mb-2">
+                <div class="small comment-meta text-muted mb-1">
                   <time datetime="<?php comment_time('c'); ?>">
                     <?php printf(_x('%1$s at %2$s', '1: date, 2: time', 'bootscore'), get_comment_date(), get_comment_time()); ?>
                   </time>
@@ -89,7 +89,7 @@ endif; // ends check for bootscore_comment()
 // h2 Reply Title
 add_filter('comment_form_defaults', 'custom_reply_title');
 function custom_reply_title($defaults) {
-  $defaults['title_reply_before'] = '<h2 id="reply-title" class="mt-4">';
+  $defaults['title_reply_before'] = '<h2 id="reply-title" class="mt-2">';
   $defaults['title_reply_after'] = '</h2>';
   return $defaults;
 }
