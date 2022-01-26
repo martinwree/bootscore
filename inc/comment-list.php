@@ -89,8 +89,8 @@ endif; // ends check for bootscore_comment()
 // h2 Reply Title
 add_filter('comment_form_defaults', 'custom_reply_title');
 function custom_reply_title($defaults) {
-  $defaults['title_reply_before'] = '<h2 id="reply-title" class="mt-2">';
-  $defaults['title_reply_after'] = '</h2>';
+  $defaults['title_reply_before'] = '<h3 id="reply-title" class="mt-2 mb-50">';
+  $defaults['title_reply_after'] = '</h3>';
   return $defaults;
 }
 // h2 Reply Title End
